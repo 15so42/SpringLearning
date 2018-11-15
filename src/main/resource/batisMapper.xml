@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http:// mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.batis.GetEmpInfo">
+    <select id="GetEmp" parameterType="int" resultType="edu.batis.Emp">
+        select empno ,ename, job  from emp where empno =#{empno}
+    </select>
+    <update id="UpdateEmp" parameterType="edu.batis.Emp" >
+        update emp set ename=#{ename},job=#{ejob} where empno=#{empno}
+    </update>
+    <insert id="AddEmp" parameterType="edu.batis.Emp">
+        insert into emp values(#{empnno},#{ename},#{job})
+    </insert>
+    <delete id="DeleteEmp" parameterType="edu.batis.Emp">
+        delete from user where id=#{id}
+    </delete>
+</mapper>
