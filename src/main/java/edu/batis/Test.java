@@ -14,9 +14,9 @@ public class Test {
         SqlSessionFactory sessionFactory=new SqlSessionFactoryBuilder().build(iStream);
         SqlSession session=sessionFactory.openSession(true);
         try{
-            GetEmpInfo empInfo=session.getMapper(GetEmpInfo.class);
+            GetEmpInfo empInfoMapper=session.getMapper(GetEmpInfo.class);
             Emp emp=new Emp(7902,"xix","啊啊啊");
-            Emp rs=empInfo.GetEmp(emp.getEmpNo());
+            Emp rs=empInfoMapper.GetEmp(emp.getEmpNo());
             System.out.println("员工号:"+rs.getEmpNo()+"员工姓名"+rs.getEmpName());
 
         }catch (Exception e){
