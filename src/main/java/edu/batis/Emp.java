@@ -4,18 +4,18 @@ import java.math.BigDecimal;
 
 public class Emp {
     int empNo;
-    String empName;
+    String eName;
     String job;
 
     public Emp(int empNo, String empName, String job) {
         this.empNo = empNo;
-        this.empName = empName;
+        this.eName = empName;
         this.job = job;
     }
     public Emp(BigDecimal empNo, String empName, String job) {
-        //妈耶!,这里得类型转换
+        //妈耶!这里得类型转换
         this.empNo = Integer.parseInt(empNo.toString());
-        this.empName = empName;
+        this.eName = empName;
         this.job = job;
     }
 
@@ -27,12 +27,12 @@ public class Emp {
         this.empNo = empNo;
     }
 
-    public String getEmpName() {
-        return empName;
+    public String geteName() {
+        return eName;
     }
 
-    public void setEmpName(String empName) {
-        this.empName = empName;
+    public void seteName(String eName) {
+        this.eName = eName;
     }
 
     public String getJob() {

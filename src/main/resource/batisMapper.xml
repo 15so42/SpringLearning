@@ -13,4 +13,17 @@
     <delete id="DeleteEmp" parameterType="edu.batis.Emp">
         delete from user where id=#{id}
     </delete>
+
+    <select id="GetEmpByResultMap" parameterType="int" resultMap="resultMapTest">
+        select empno ,ename, job  from emp where empno =#{empno}
+    </select>
+    <resultMap id="resultMapTest" type="edu.batis.Emp">
+        <id property="empNo" column="empno"/>
+        <result property="eName" column="ename"/>
+        <result property="job" column="job"/>
+    </resultMap>
+
+
+
 </mapper>
+
