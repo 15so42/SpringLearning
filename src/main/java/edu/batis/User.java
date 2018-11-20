@@ -34,4 +34,8 @@ public class User {
     public void setCorp(String corp) {
         this.corp = corp;
     }
+
+    public String toString(){
+        return "id:"+id+" userName:"+userName+" corp:"+corp;
+    }
 }
